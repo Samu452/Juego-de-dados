@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Dados D&D</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simulador de Dados D&D</h1>
+      <div class="form-group">
+        <label for="numDados">Número de dados:</label>
+        <input type="number" id="numDados" min="1" value="1" />
+      </div>
+      <div class="form-group">
+        <label for="tipoDado">Tipo de dado:</label>
+        <select id="tipoDado">
+          <option value="4">1d4</option>
+          <option value="6">1d6</option>
+          <option value="8">1d8</option>
+          <option value="10">1d10</option>
+          <option value="12">1d12</option>
+          <option value="20">1d20</option>
+          <option value="100">1d100</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="bonificacion">Bonificación o reducción:</label>
+        <input type="number" id="bonificacion" value="0" />
+      </div>
+      <div class="form-group">
+        <label for="resultadoEspecifico">Mostrar resultado específico:</label>
+        <input type="checkbox" id="resultadoEspecifico" />
+      </div>
+      <div class="form-group">
+        <label for="lanzarArea" class="button">Lanzar Dados</label>
+      </div>
+      <div id="resultados">
+        <p id="detalles"></p>
+        <p id="resultadosDados"></p>
+        <p id="sumaSinBonificacion"></p>
+        <p id="bonificacionTotal"></p>
+      </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
